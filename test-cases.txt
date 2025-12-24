@@ -1,0 +1,37 @@
+Test Suite: Hotel Booking UI Verification
+App URL: https://automationintesting.online/
+
+TC_01: Verify successful room booking with valid data
+Pre-conditions: User is on the homepage.
+Steps:
+1. Navigate to the "Book this room" section.
+2. Select specific dates on the calendar (e.g., drag and drop 2 nights).
+3. Fill in "First Name" with "Dmytro".
+4. Fill in "Last Name" with "Skaliush".
+5. Fill in "Email" with "dmytro@test.com".
+6. Fill in "Phone" with "12345678901".
+7. Click the "Book" button.
+Expected Result:
+- A success modal/message appears: "Booking Successful!".
+- The booked dates are no longer selectable on the calendar.
+
+TC_02: Verify booking fails with invalid/missing data
+Pre-conditions: User is on the homepage.
+Steps:
+1. Navigate to the "Book this room" section.
+2. Select dates on the calendar.
+3. Leave "First Name", "Last Name", "Email", and "Phone" fields EMPTY.
+4. Click the "Book" button.
+Expected Result:
+- Error messages are displayed under the respective fields (e.g., "Firstname must not be blank").
+- Booking is not processed.
+
+TC_03: Verify unavailability of already booked dates
+Pre-conditions: A booking already exists for dates X to Y.
+Steps:
+1. Refresh the page to update the calendar view.
+2. Observe the dates X to Y on the calendar.
+3. Attempt to select dates X to Y.
+Expected Result:
+- The dates are visually distinct (e.g., red or grayed out).
+- User cannot select these dates for a new booking.
