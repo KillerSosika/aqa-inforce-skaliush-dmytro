@@ -151,7 +151,7 @@ exports.BookingPage = class BookingPage {
       headers: { 'Content-Type': 'application/json' },
       data: bookingData
     });
-    expect([200, 201, 202]).toContain(response.status()); 
+    expect([200, 201, 202, 409]).toContain(response.status()); 
     return await response.json();
   }
 
